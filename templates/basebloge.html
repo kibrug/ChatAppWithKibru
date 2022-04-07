@@ -1,0 +1,105 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'media/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <!-- Optional JavaScript; choose one of the two! -->
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+  <script  src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  <!-- Option 2: jquery JS -->
+  <script  src="{% static 'customjs/jquery-3.6.0.min.js' %}"></script>
+    
+    
+    
+   
+    
+    <!-- Bootstrap CSS -->
+    
+    <link href="{%static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" >
+
+    <!--custom css-->
+    
+    <link href="{% static 'customcss/bloge.css' %}" rel="stylesheet" >
+    <link href="{% static 'customcss/nave.css' %}" rel="stylesheet" >
+
+     <!--custom js-->
+     
+    
+    
+    <title>Bloge</title>
+ 
+  </head>
+  <body>
+
+
+     <!-- ======= Header ======= -->
+  <div class="container">
+    <div class="row">
+            <header id="header" class="fixed-top btn-success">
+            <div class="container d-flex align-items-center">
+
+                <h1 class="logo me-auto"><a href="index.html">Debo </a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+                <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="{% url 'verfarmapp:bloge' %}">Home</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'verfarmapp:whatvf' %}">About</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'verfarmapp:whatvf' %}">Services</a></li>
+                    <li><a class="nav-link   scrollto" href="{% url 'verfarmapp:whatvf' %}">Blogs</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'verfarmapp:whatvf' %}">Order Us</a></li>
+                
+                    <li><a class="nav-link scrollto" href="{% url 'verfarmapp:whatvf' %}">Contact Us</a></li>
+                
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+
+            </div>
+            </header><!-- End Header -->
+
+</div>
+</div>
+     
+    
+
+      
+
+
+   <!--start body-->
+    <div class="main m-5">
+        <div id="main" class="mt-5">
+        {% block content %}
+    
+        {% endblock content %}
+        </div>
+    </div>
+
+   
+ 
+ 
+
+
+  
+      
+
+
+
+
+
+ <!--custom js-->
+    <script  src="{% static  'customjs/bloge.js' %}" type="text/JavaScript"></script>
+   <script  src="{% static  'customjs/nave.js' %}" type="text/JavaScript"></script>
+   
+  </body>
+</html>

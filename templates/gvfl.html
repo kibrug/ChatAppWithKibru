@@ -1,0 +1,54 @@
+{% extends 'basebloge.html' %}
+{% load static %}
+    {% block content %}
+      <!--post one start-->
+      <div class="contaner"> <h1 class="h1 text-center nameofBloge"> <span>  Globally Vertical Farming Leaders </span> </div>
+
+
+         
+        {%for post in post_list%}
+        <div class="contaner mt-5">
+        
+ 
+     
+      </h1>
+          <div class="row  mt-5">
+              <div class="col-sm-8 mt-5">
+                <div class="">
+                  <div class="card-body ">
+                    <p> Indoor vertical farming is vital for the future of food security. Climate change and the COVID-19 pandemic have disrupted global supply chains, forcing countries to rethink the way they source food and localize their production through indoor vertical farming. Some countries are a few steps ahead, while others need to move fast. Here are the top 10 countries and regions that we’re looking out for.</p>
+                  
+                    <h5 class="card-title  text-center mt-4"> {{post.title}}</h5>
+                        
+                        <p class="card-text  mt-5  ">
+                          {{post.content}}
+                        </P>
+                        <p>posted on {{post.created_on}}</p>
+                            
+                          
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 ">
+                <div class="">
+                  <div class="card-body bloge">
+                    
+                      <img src="{% static 'image/avf.png' %}" class="rounded mx-auto d-block imagesizofbloge" alt="Vertical farming">
+                   
+                   
+                      
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+          
+ </div>
+ 
+ {% endfor%}
+ 
+ <!--post one end-->
+   
+     
+    {% endblock content%}
+

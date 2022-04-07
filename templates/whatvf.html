@@ -1,0 +1,78 @@
+
+
+
+{% extends 'basebloge.html' %}
+{% load static %}
+    {% block content %}
+    <!--post one start-->
+    <div class="contaner mt-5"> <h1 class="h1 text-center nameofBloge"> <span>  What is Vertical Farming </span> </h1> 
+    </div>
+      <!--post one start-->
+      {% for post in post_list%}
+      <div class="row  mt-5">
+        <div class="col-sm-8 mt-5">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text"> {{post.content}}</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 ">
+      <div class="">
+        <div class="card-body bloge">
+          
+            <img src="{% static 'image/avf.png' %}" class="rounded mx-auto d-block imagesizofbloge" alt="Vertical farming">
+         
+         
+            
+        </div>
+      </div>
+    </div>
+        {% endfor%}
+      {%for post in post_list%}
+      <div class="contaner mt-5">
+      
+
+   
+    </h1>
+        <div class="row  mt-5">
+            <div class="col-sm-8 mt-5">
+              <div class="">
+                <div class="card-body ">
+                
+                  <h5 class="card-title  text-center mt-4"> {{post.title}}</h5>
+                      
+                      <p class="card-text  mt-5  ">
+                        {{post.content}}
+                      </P>
+                      <p>posted on {{post.created_on}}</p>
+                          
+                        
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 ">
+              <div class="">
+                <div class="card-body bloge">
+                  
+                    <img src="{% static 'image/avf.png' %}" class="rounded mx-auto d-block imagesizofbloge" alt="Vertical farming">
+                 
+                 
+                    
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        
+</div>
+
+{% endfor%}
+
+<!--post one end-->
+
+    {%  endblock content%}

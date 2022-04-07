@@ -1,0 +1,81 @@
+
+{% extends 'basebloge.html' %}
+{% load static %}
+    {% block content %}
+    <!--post one start-->
+    <div class="contaner mt-5">
+
+     
+  
+          
+
+      <h1 class="h1 text-center nameofBloge"> <span>  Bloge </span> 
+      </h1>
+          <div class="row ">
+              <div class="col-sm-4 ">
+                <div class="card">
+                
+                  <div class="card-body bloge">
+                      <img src="{% static 'image/wvf.png' %}" class="rounded mx-auto d-block imagesizofbloge" alt="Vertical farming">
+                   
+                      <h5 class="card-title  text-center mt-4">What is Vertical farming ?</h5>
+                    <p class="card-text text-center mt-5 text-center blogrp">Vertical farming is the......
+                        </p>
+                        <div class="card mt-5">
+                        
+                          <a href="{% url 'verfarmapp:whatvf' %}" class="btn btn-primary " > More...</a>
+                       </div>
+                       
+                          
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 ">
+                <div class="card">
+                  <div class="card-body bloge">
+                      <img src="{% static 'image/avf.png' %}" class="rounded mx-auto d-block imagesizofbloge" alt="Vertical farming">
+                    <h5 class="card-title text-center mt-4">Advantages of Vertical farming</h5>
+                    <p class="card-tex text-center mt-5 blogrp">Because it’s not dependent 
+                        on .....
+                      
+                     </p>
+                    <div class="card mt-5">
+                      <a href="{% url 'verfarmapp:advf' %}" class="btn btn-primary ">More...</a>
+                   </div>
+                      
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 ">
+                  <div class="card">
+                    <div class="card-body bloge">
+                      <img src="{% static 'image/vfl.png' %}" class="rounded mx-auto d-block imagesizofbloge" alt="Vertical farming">
+                      <h5 class="card-title text-center mt-4 ">Globally Vertical Farming Leaders</h5>
+                      <p class="card-text text-center mt-5 blogrp">Globally Vertical Farming Leaders are......
+                        
+                           </p>
+                           <div class="card mt-5">
+                              <a href="{% url 'verfarmapp:gvfl' %}" class="btn btn-primary ">More...</a>
+                           </div>
+                              
+                           
+                      
+                    </div>
+                  </div>
+                </div>
+            </div>
+          
+</div>
+ <!--post one end-->
+
+    
+    {% endblock content %}
+
+
+
+  
+      
+
+
+
+
